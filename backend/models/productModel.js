@@ -1,6 +1,6 @@
-import mongoose, { mongo } from 'mongoose';
+import mongoose from 'mongoose';
 
-const revireSchema = mongoose.Schema(
+const reviewSchema = mongoose.Schema(
   {
     name: { type: String, required: true },
     rating: { type: Number, required: true },
@@ -65,6 +65,6 @@ const productSchema = mongoose.Schema(
   }
 );
 
-const Product = mongoose.model('Product', ProductSchema);
+const Product = mongoose.model('Product', productSchema);
 
 export default Product;
