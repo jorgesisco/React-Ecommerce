@@ -8,7 +8,7 @@ import {
 
 export const listProducts = () => async (dispatch) => {
   try {
-    dispatch({ type: PRODUCT_LIST_REQUEST }); // This will call in the recuder and set loading to true, products will still be empty...
+    dispatch({ type: PRODUCT_LIST_REQUEST }); // This will call in the reducer and set loading to true, products will still be empty...
 
     const { data } = await axios.get('/api/products'); // Api http request
 
@@ -20,7 +20,7 @@ export const listProducts = () => async (dispatch) => {
         error.response && error.response.data.message
           ? error.response.data.message
           : error.message,
-      // Here, we are adding the message shown on postsman when there is an error :)
+      // Here, we are adding the message shown on Postman when there is an error :)
     });
   }
 };
