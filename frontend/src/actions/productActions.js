@@ -15,7 +15,7 @@ export const listProducts = () => async (dispatch) => {
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data }); // this will set the data to the paiload
   } catch (error) {
     dispatch({
-      tpye: PRODUCT_LIST_FAIL,
+      type: PRODUCT_LIST_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message
