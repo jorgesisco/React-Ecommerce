@@ -6,14 +6,14 @@ import {
   productDetailsReducer,
 } from './reducers/productReducers';
 import { cartReducer } from './reducers/cartReducers';
-import { userLogInReducer } from './reducers/userReducers';
+import { userLoginReducer } from './reducers/userReducers';
 
 // the reducers we created go inside combineReducers like is shown in the line below
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer,
-  userLogIn: userLogInReducer,
+  userLogin: userLoginReducer,
 });
 
 const cartItemsFromStorage = localStorage.getItem('cartItems')
@@ -26,7 +26,7 @@ const userInfoFromStorage = localStorage.getItem('userInfo')
 
 const initialState = {
   cart: { cartItems: cartItemsFromStorage },
-  userLogIn: { userInfo: userInfoFromStorage },
+  userLogin: { userInfo: userInfoFromStorage },
 };
 
 const middleware = [thunk];
