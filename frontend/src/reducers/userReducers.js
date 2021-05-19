@@ -63,7 +63,11 @@ export const userDetailsReducer = (state = { user: {} }, action) => {
   }
 };
 
+
+// Reducer for our user UPDATE
+
 // Reducer for our profile update
+
 export const userUpdateProfileReducer = (state = {}, action) => {
   switch (action.type) {
     case USER_UPDATE_PROFILE_REQUEST:

@@ -110,7 +110,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
 
     const config = {
       headers: {
-        'Content-Type': 'aplication/json',
+        'Content-Type': 'application/json',
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
@@ -145,7 +145,8 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
 
     const config = {
       headers: {
-        'Content-Type': 'aplication/json',
+
+        'Content-Type': 'application/json',
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
@@ -158,6 +159,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
     });
 
     localStorage.setItem('userInfo', JSON.stringify(data));
+
   } catch (error) {
     dispatch({
       type: USER_UPDATE_PROFILE_FAIL,
