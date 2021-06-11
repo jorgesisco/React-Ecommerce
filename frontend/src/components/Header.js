@@ -13,7 +13,6 @@ const Header = () => {
     dispatch(logout());
   };
 
-  console.log(userInfo);
   return (
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
